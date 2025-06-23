@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://nextfolio-template.vercel.app/</id>
-    <title>Nextfolio</title>
-    <updated>2025-06-23T10:28:47.759Z</updated>
+    <title>Akash Patki</title>
+    <updated>2025-06-23T11:57:51.609Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://nextfolio-template.vercel.app/"/>
     <link rel="self" href="https://nextfolio-template.vercel.app/atom.xml"/>
-    <subtitle>A clean, fast, and lightweight portfolio template built with Next.js, Vercel, and Tailwind CSS for optimal performance.</subtitle>
-    <rights>All rights reserved 2025, Nextfolio</rights>
+    <subtitle>A showcase of high-performance, scalable software projects by a Toronto-based full-stack developer with 15+ years of experience across startups, scale-ups, and big banks.</subtitle>
+    <rights>All rights reserved 2025, Akash Patki</rights>
     <entry>
         <title type="html"><![CDATA[Custom MDX Examples]]></title>
         <id>https://nextfolio-template.vercel.app/blog/custom-mdx-examples</id>
