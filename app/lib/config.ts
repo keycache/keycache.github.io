@@ -1,8 +1,8 @@
 export const metaData = {
-  baseUrl: "https://nextfolio-template.vercel.app/",
+  baseUrl: "https://keycache.github.io/",
   title: "Akash Patki",
   name: "KeyCache",
-  // ogImage: "/opengraph-image.png",
+  ogImage: "/open-graph.png",
   description:
     "A showcase of high-performance, scalable software projects by a Toronto-based full-stack developer with 15+ years of experience across startups, scale-ups, and big banks.",
 };
