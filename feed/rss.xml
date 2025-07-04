@@ -2,30 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Akash Patki</title>
-        <link>https://nextfolio-template.vercel.app/</link>
-        <description>A showcase of high-performance, scalable software projects by a Toronto-based full-stack developer with 15+ years of experience across startups, scale-ups, and big banks.</description>
-        <lastBuildDate>Mon, 23 Jun 2025 11:57:51 GMT</lastBuildDate>
+        <link>https://keycache.github.io/</link>
+        <description>A showcase for a Toronto-based full-stack developer with 15+ years of experience across startups, scale-ups, and big banks.</description>
+        <lastBuildDate>Fri, 04 Jul 2025 20:39:41 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <copyright>All rights reserved 2025, Akash Patki</copyright>
-        <atom:link href="https://nextfolio-template.vercel.app/rss.xml" rel="self" type="application/rss+xml"/>
+        <atom:link href="https://keycache.github.io/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[Custom MDX Examples]]></title>
-            <link>https://nextfolio-template.vercel.app/blog/custom-mdx-examples</link>
-            <guid isPermaLink="false">https://nextfolio-template.vercel.app/blog/custom-mdx-examples</guid>
-            <pubDate>Sun, 11 Aug 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[Nextfolio custom MDX examples.]]></description>
-            <category>Custom MDX</category>
-            <category>Web development</category>
-        </item>
-        <item>
-            <title><![CDATA[Getting Started with Nextfolio]]></title>
-            <link>https://nextfolio-template.vercel.app/blog/getting-started</link>
-            <guid isPermaLink="false">https://nextfolio-template.vercel.app/blog/getting-started</guid>
-            <pubDate>Tue, 13 Aug 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[Instructions to build and configure your Nextfolio portfolio.]]></description>
-            <category>Configuration</category>
-            <category>Web development</category>
+            <title><![CDATA[The Four Faces of a Developer: Why Every Dev Has (At Least) 4 Personalities]]></title>
+            <link>https://keycache.github.io/blog/four-faces-of-a-developer</link>
+            <guid isPermaLink="false">https://keycache.github.io/blog/four-faces-of-a-developer</guid>
+            <pubDate>Fri, 04 Jul 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Every developer juggles at least four identities — polished pro, clueless explainer, chill buddy, and masked internet gremlin — depending on who's watching]]></description>
+            <category>dev-life</category>
+            <category>personas</category>
+            <category>programming</category>
         </item>
     </channel>
 </rss>

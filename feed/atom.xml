@@ -1,29 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://nextfolio-template.vercel.app/</id>
+    <id>https://keycache.github.io/</id>
     <title>Akash Patki</title>
-    <updated>2025-06-23T11:57:51.609Z</updated>
+    <updated>2025-07-04T20:39:41.798Z</updated>
     <generator>Feed for Node.js</generator>
-    <link rel="alternate" href="https://nextfolio-template.vercel.app/"/>
-    <link rel="self" href="https://nextfolio-template.vercel.app/atom.xml"/>
-    <subtitle>A showcase of high-performance, scalable software projects by a Toronto-based full-stack developer with 15+ years of experience across startups, scale-ups, and big banks.</subtitle>
+    <link rel="alternate" href="https://keycache.github.io/"/>
+    <link rel="self" href="https://keycache.github.io/atom.xml"/>
+    <subtitle>A showcase for a Toronto-based full-stack developer with 15+ years of experience across startups, scale-ups, and big banks.</subtitle>
     <rights>All rights reserved 2025, Akash Patki</rights>
     <entry>
-        <title type="html"><![CDATA[Custom MDX Examples]]></title>
-        <id>https://nextfolio-template.vercel.app/blog/custom-mdx-examples</id>
-        <link href="https://nextfolio-template.vercel.app/blog/custom-mdx-examples"/>
-        <updated>2024-08-11T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Nextfolio custom MDX examples.]]></summary>
-        <category label="Custom MDX" term="Custom MDX"/>
-        <category label="Web development" term="Web development"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Getting Started with Nextfolio]]></title>
-        <id>https://nextfolio-template.vercel.app/blog/getting-started</id>
-        <link href="https://nextfolio-template.vercel.app/blog/getting-started"/>
-        <updated>2024-08-13T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Instructions to build and configure your Nextfolio portfolio.]]></summary>
-        <category label="Configuration" term="Configuration"/>
-        <category label="Web development" term="Web development"/>
+        <title type="html"><![CDATA[The Four Faces of a Developer: Why Every Dev Has (At Least) 4 Personalities]]></title>
+        <id>https://keycache.github.io/blog/four-faces-of-a-developer</id>
+        <link href="https://keycache.github.io/blog/four-faces-of-a-developer"/>
+        <updated>2025-07-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Every developer juggles at least four identities — polished pro, clueless explainer, chill buddy, and masked internet gremlin — depending on who's watching]]></summary>
+        <category label="dev-life" term="dev-life"/>
+        <category label="personas" term="personas"/>
+        <category label="programming" term="programming"/>
     </entry>
 </feed>
