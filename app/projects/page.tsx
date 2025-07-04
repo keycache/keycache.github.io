@@ -12,7 +12,7 @@ export default function ProjectPosts() {
 
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-medium">All Blog Posts</h1>
+      <h1 className="mb-8 text-2xl font-medium">All The Projects/Side-Quests</h1>
       <div>
         {allProjects
           .sort((a, b) => {

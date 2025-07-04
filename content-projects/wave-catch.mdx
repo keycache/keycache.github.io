@@ -1,0 +1,204 @@
+---
+title: "Wave-Catch: Real-time Audio Processing with AI-Powered Transcription and Analysis"
+publishedAt: "2025-07-04"
+summary: "An AI-powered audio analysis tool that records, transcribes, and analyzes conversations to provide unbiased feedback and identify gaps that speakers might overlook"
+tags: "python, audio, processing, stt, llm, mlx-audio, ai, transcription, multi-threading"
+draft: false
+---
+
+## Introduction
+
+Have you ever finished a presentation or important discussion and wondered, "Did I miss something obvious?" or "What would an outsider think of this conversation?" That's the exact challenge that inspired **Wave-Catch** - a Python-based tool designed to capture, transcribe, and analyze audio content through the lens of AI-powered neutral analysis.
+
+Wave-Catch was born from a simple but powerful realization: as humans, we're often too close to our own conversations and presentations to spot the gaps, inconsistencies, or opportunities that might be obvious to a neutral observer. By combining real-time audio recording, speech-to-text transcription, and large language model analysis, Wave-Catch acts as that "outside observer" - providing unbiased insights and identifying potential blind spots that we might overlook in the heat of the moment.
+
+The tool goes beyond simple transcription to offer something more valuable: **perspective**. Whether you're delivering a technical presentation, conducting an incident post-mortem, or leading a team discussion, Wave-Catch helps you see your own content through fresh eyes, uncovering insights that only emerge when viewed from an objective, analytical standpoint.
+
+## Problem Statement / Motivation
+
+The core challenge I wanted to solve was deceptively simple: **how do you identify what you don't know you don't know?** In presentations, meetings, and discussions, we often get so caught up in our own perspective that we miss obvious gaps, assumptions, or opportunities for improvement.
+
+The specific problems I encountered were:
+
+- **Blind spot identification**: When you're deeply involved in a topic, it's nearly impossible to spot your own knowledge gaps or unclear explanations
+- **Perspective bias**: Our own familiarity with the subject matter prevents us from seeing how our communication might land with others
+- **Real-time analysis limitations**: During live conversations, we're too focused on participation to simultaneously analyze the broader patterns and insights
+- **Missed learning opportunities**: Without neutral analysis, valuable insights from discussions often go unrecognized and unexplored
+
+Traditional approaches like peer review or feedback sessions, while valuable, come with their own biases and limitations. What I needed was a way to get that "outside-the-box" thinking that only comes from a truly neutral perspective - one that could analyze my talks and transcripts without the baggage of personal relationships, organizational politics, or domain-specific assumptions.
+
+The goal wasn't just to transcribe what was said, but to **uncover what wasn't said** - the implicit assumptions, the logical gaps, the unexplored angles that an intelligent but neutral observer might immediately spot. This is where large language models excel: they can process information without the contextual biases that humans inevitably bring to the table.
+
+## Solution Overview
+
+Wave-Catch addresses these challenges through a modular, Python-based architecture that orchestrates three main components:
+
+1. **Real-time Audio Recording**: Uses `sounddevice` to capture high-quality audio with configurable parameters
+2. **Speech-to-Text Transcription**: Leverages MLX Audio with the Parakeet model for accurate transcription
+3. **AI-Powered Analysis**: Integrates with LLM Gateway to provide context-aware analysis using different prompt templates
+
+The tool supports multiple analysis modes:
+- **Speech Analysis**: General communication and speech pattern analysis
+- **Incident Learning**: Structured post-mortem and learning discussions
+
+Key features include:
+- **Multi-threaded recording** for smooth audio capture
+- **Graceful interrupt handling** (Ctrl+C to stop)
+- **Flexible input sources** (live recording or existing transcript files)
+- **Streaming LLM responses** for real-time feedback
+- **Rich markdown rendering** for beautiful output formatting
+
+## Implementation Details
+
+The core architecture revolves around several key components:
+
+### Audio Recording Pipeline
+```python
+# Thread-safe audio capture with configurable parameters
+audio_queue = queue.Queue()
+with sd.InputStream(
+    samplerate=SAMPLE_RATE,
+    channels=CHANNELS,
+    callback=audio_callback,
+    blocksize=BLOCK_SIZE,
+    dtype=DTYPE
+):
+```
+
+The recording system uses a producer-consumer pattern where audio chunks are captured in a callback function and stored in a thread-safe queue. This ensures smooth recording without blocking the main thread.
+
+### Transcription Integration
+The transcription leverages MLX Audio with the Parakeet model:
+```python
+cmd = [
+    python_path,
+    "-m", "mlx_audio.stt.generate",
+    "--model", model,
+    "--audio", file_path,
+    "--output", output_file
+]
+```
+
+This approach provides high-quality transcription while maintaining local processing capabilities.
+
+### LLM Integration with Streaming
+One of the most interesting aspects is the streaming LLM integration:
+```python
+with requests.post(url, headers={'Content-Type': 'application/json'},
+                  data=payload, stream=True) as response:
+    for chunk in response.iter_content(chunk_size=None, decode_unicode=False):
+        # Process streaming JSON chunks
+        json_chunk = json.loads(json_str)
+        content = json_chunk['choices'][0]['delta'].get('content',"")
+        if content:
+            out += content
+            print(content, end='', flush=True)
+```
+
+This streaming approach provides real-time feedback as the LLM generates responses, creating a more interactive experience.
+
+### Modular Prompt System
+The tool uses a flexible prompt system that adapts to different analysis contexts:
+```python
+def get_prompts_for_task(task):
+    if task == "speech":
+        return SP_ANALYSE_SPEECH, UP_ANALYSE_SPEECH
+    elif task == "incident":
+        return SP_INCIDENT_LEARNING_DISCUSSION, UP_INCIDENT_LEARNING_DISCUSSION
+```
+
+This allows for easy extension to new analysis types without modifying core logic.
+
+## Key Learnings & Insights
+
+Building Wave-Catch taught me several valuable lessons about audio processing and AI integration:
+
+### Threading and Audio Processing
+Audio processing requires careful attention to threading and buffer management. The callback-based approach with thread-safe queues proved essential for maintaining audio quality without dropouts.
+
+### LLM Streaming Implementation
+Implementing streaming responses from LLMs significantly improved the user experience. Instead of waiting for complete responses, users see analysis results in real-time, making the tool feel more responsive and interactive.
+
+### Error Handling in AI Pipelines
+AI pipelines are inherently fragile due to multiple external dependencies. Robust error handling at each stage (recording, transcription, analysis) ensures the tool remains usable even when individual components fail.
+
+### Configuration Management
+Separating configuration into constants and making paths configurable proved crucial for deployment across different environments.
+
+## User Experience & Testing
+
+Testing revealed several important UX considerations:
+- **Clear progress indicators** help users understand what's happening during longer operations
+- **Graceful interrupt handling** allows users to stop recording naturally
+- **Rich markdown output** makes analysis results easy to read and share
+
+The command-line interface supports both live recording and file-based analysis:
+```bash
+# Live recording and analysis
+python main.py --task speech
+
+# Analyze existing transcript
+python main.py --task incident --file transcript.txt
+```
+
+## Reflections & Personal Takeaways
+
+This project reinforced the importance of **building composable systems**. By separating audio capture, transcription, and analysis into distinct components, the tool becomes much more maintainable and extensible.
+
+The **streaming LLM integration** was particularly rewarding to implement. It transforms what could be a frustrating wait into an engaging, real-time experience that feels more like a conversation with the AI.
+
+Working with **multiple AI services** (STT and LLM) highlighted the importance of robust error handling and graceful degradation. Each service has its own failure modes, and the system needs to handle them elegantly.
+
+Finally, the **modular prompt system** proved its worth immediately. Being able to switch between different analysis contexts (speech vs. incident) with simple command-line flags makes the tool much more versatile.
+
+## What's Next / Future Work
+
+Several exciting directions for Wave-Catch's evolution:
+
+### Enhanced Analysis Modes
+- **Meeting summary mode**: Structured meeting notes with action items
+- **Interview analysis**: Candidate evaluation and feedback generation
+- **Training analysis**: Performance coaching and improvement suggestions
+
+### Technical Improvements
+- **Real-time transcription**: Stream audio directly to STT for live analysis
+- **Multi-speaker detection**: Identify and track different speakers
+- **Audio preprocessing**: Noise reduction and audio enhancement
+- **Web interface**: Browser-based UI for easier access
+
+### Integration Enhancements
+- **Slack/Teams integration**: Direct posting of analysis results
+- **Calendar integration**: Automatic meeting analysis
+- **File format support**: Support for various audio formats beyond WAV
+
+### Performance Optimization
+- **Local LLM support**: Reduce dependency on external services
+- **Caching system**: Store and reuse transcriptions
+- **Batch processing**: Analyze multiple files efficiently
+
+## Resources & Links
+
+### Key Technologies Used
+- **[sounddevice](https://python-sounddevice.readthedocs.io/)**: Real-time audio I/O
+- **[MLX Audio](https://github.com/Blaizzy/mlx-audio)**: High-performance speech-to-text
+- **[Rich](https://rich.readthedocs.io/)**: Beautiful terminal formatting
+- **[Parakeet Model](https://huggingface.co/mlx-community/parakeet-tdt-0.6b-v2)**: Speech recognition model
+
+### Development Resources
+- **Threading in Python**: Essential for audio processing
+- **LLM Gateway Integration**: Streaming response handling
+- **Audio Processing Fundamentals**: Understanding sample rates and formats
+
+## Call to Action / Closing Thoughts
+
+Wave-Catch represents the potential of combining multiple AI services into cohesive, user-friendly tools. While the current implementation focuses on audio analysis, the architectural patterns are broadly applicable to other AI integration challenges.
+
+If you're interested in building similar tools, I'd encourage you to:
+1. **Start with clear separation of concerns** - keep audio, transcription, and analysis separate
+2. **Implement streaming interfaces** where possible for better UX
+3. **Design for extensibility** - new analysis types should be easy to add
+4. **Focus on error handling** - AI pipelines have many failure points
+
+---
+
+*Want to try Wave-Catch or contribute to its development? Check out the project repository and let's build something amazing together!*
