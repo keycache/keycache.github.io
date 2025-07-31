@@ -1,0 +1,118 @@
+---
+title: "No More `if isinstance`— Master Polymorphism in Python with `@singledispatch`!"
+publishedAt: "2025-07-15"
+summary: "Polymorphism sounds complex, but it’s easier (and cooler) than you think. Let a cartoon snake walk you through writing cleaner Python code."
+tags: "python, programming, oop, polymorphism"
+draft: "false"
+---
+
+> Because type-checking spaghetti code is so 2022
+
+<Image
+  src="/photos/polymorpism-in-python-2.png"
+  alt="Happy Python Developer"
+  width={640}
+  height={500}
+/>
+
+Introduction
+- Tired of writing long `if isinstance(...)` chains just to handle different data types?
+- Say hello to `@singledispatch`, Python’s elegant solution for type-based function overloading.
+- It’s Python’s take on polymorphism — and yes, it’s as cool as it sounds.
+- In this blog, you’ll learn what it is, when to use it, and how it can make your code cleaner.
+- We'll even walk through a real-world example: building a type-based serializer!
+
+Prerequisites
+- Basic knowledge of Python functions and decorators.
+- Understanding of data types like `int`, `str`, `list`, `datetime`, etc.
+- Familiarity with `isinstance()` and why it often clutters code.
+- Python 3.4+ (since `@singledispatch` was added in Python 3.4).
+- A desire to write more modular and extensible code.
+
+Understanding `@singledispatch`
+- `@singledispatch` is a decorator from `functools` that lets you define a function whose behavior varies based on the type of the first argument.
+- It's Python’s way of enabling ad hoc polymorphism — overloading based on type.
+- Each type gets its own version of the function, registered separately.
+- Keeps logic isolated and clean — no need for nested `if/elif` blocks.
+- Makes your codebase easier to extend and test.
+
+Example: Type-Based Data Serializer
+
+Scenario:
+You’re building an API or logging system that needs to serialize various Python objects (e.g., `datetime`, `Decimal`, `list`) into JSON-compatible formats.
+
+The Problem:
+Using `isinstance()` checks everywhere creates tangled, unreadable code.
+
+The Solution:
+Use `@singledispatch` to define clear, type-specific serializers.
+
+```python
+from functools import singledispatch
+from datetime import datetime
+from decimal import Decimal
+import json
+
+@singledispatch
+def to_json_serializable(value):
+    raise TypeError(f"Type {type(value)} not serializable")
+
+@to_json_serializable.register(datetime)
+def _(value):
+    return value.isoformat()
+
+@to_json_serializable.register(Decimal)
+def _(value):
+    return float(value)
+
+@to_json_serializable.register(list)
+def _(value):
+    return [to_json_serializable(item) for item in value]
+
+# Usage
+data = {
+    "timestamp": to_json_serializable(datetime.utcnow()),
+    "price": to_json_serializable(Decimal("19.99")),
+    "tags": to_json_serializable(["promo", "sale"]),
+}
+
+print(json.dumps(data, indent=2))
+```
+
+### FAQs
+
+**Q: Does this replace object-oriented polymorphism?**
+A: No, it complements it. This is for functions, not classes.
+
+**Q: Can I use it with custom classes?**
+A: Absolutely. Just register your class type with the dispatcher.
+
+**Q: What happens if a type isn’t registered?**
+A: The base function is called — you can handle it with a fallback or raise a `TypeError`.
+
+**Q: Can I dispatch on more than one argument?**
+A: No — `@singledispatch` only works on the first argument.
+
+**Q: Is there a class-based version?**
+A: Yes, Python 3.8+ includes `@singledispatchmethod` for methods inside classes.
+
+---
+
+### Final Word
+
+`@singledispatch` is a powerful, Pythonic way to implement polymorphism and clean up messy code.
+
+It encourages modular design, extensibility, and readable logic separation by type.
+
+Whether you're serializing data, formatting logs, or building type-specific behavior, this tool will save you time and refactors.
+
+It’s one of those "once you know it, you use it everywhere" Python features.
+
+---
+
+<Image
+  src="/photos/polymorpism-in-python-1.png"
+  alt="Illustration of a Python snake holding a toolbox labeled 'Polymorphism', admiring a clean OOP codebase on a monitor"
+  width={640}
+  height={500}
+/>
