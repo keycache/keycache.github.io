@@ -4,7 +4,7 @@
         <title>Akash Patki</title>
         <link>https://keycache.github.io/</link>
         <description>A showcase for a Toronto-based full-stack developer with 15+ years of experience across startups, scale-ups, and big banks.</description>
-        <lastBuildDate>Fri, 04 Jul 2025 21:02:38 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 31 Jul 2025 04:15:33 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <copyright>All rights reserved 2025, Akash Patki</copyright>
@@ -18,6 +18,30 @@
             <category>dev-life</category>
             <category>personas</category>
             <category>programming</category>
+        </item>
+        <item>
+            <title><![CDATA[No More `if isinstance`— Master Polymorphism in Python with `@singledispatch`!]]></title>
+            <link>https://keycache.github.io/blog/polymorpism-in-python</link>
+            <guid isPermaLink="false">https://keycache.github.io/blog/polymorpism-in-python</guid>
+            <pubDate>Tue, 15 Jul 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Polymorphism sounds complex, but it’s easier (and cooler) than you think. Let a cartoon snake walk you through writing cleaner Python code.]]></description>
+            <category>python</category>
+            <category>programming</category>
+            <category>oop</category>
+            <category>polymorphism</category>
+        </item>
+        <item>
+            <title><![CDATA[When You’re the Judge and the Contestant for your and their ideas.]]></title>
+            <link>https://keycache.github.io/blog/when-you-are-the-judge-and-contestant-for-your-and-thei-ideas</link>
+            <guid isPermaLink="false">https://keycache.github.io/blog/when-you-are-the-judge-and-contestant-for-your-and-thei-ideas</guid>
+            <pubDate>Thu, 31 Jul 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[You’re in a team meeting, two ideas clash, and yours is one of them. How do you stay fair, thoughtful, and not spiral into self-doubt? Here's a relatable deep dive into the mental gymnastics of honest decision-making.]]></description>
+            <category>leadership</category>
+            <category>decision-making</category>
+            <category>bias</category>
+            <category>team-culture</category>
+            <category>self-doubt</category>
+            <category>growth</category>
         </item>
     </channel>
 </rss>

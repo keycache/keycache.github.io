@@ -16,6 +16,34 @@
                 "personas",
                 "programming"
             ]
+        },
+        {
+            "id": "https://keycache.github.io/blog/polymorpism-in-python",
+            "content_html": "Polymorphism sounds complex, but it’s easier (and cooler) than you think. Let a cartoon snake walk you through writing cleaner Python code.",
+            "url": "https://keycache.github.io/blog/polymorpism-in-python",
+            "title": "No More `if isinstance`— Master Polymorphism in Python with `@singledispatch`!",
+            "date_modified": "2025-07-15T00:00:00.000Z",
+            "tags": [
+                "python",
+                "programming",
+                "oop",
+                "polymorphism"
+            ]
+        },
+        {
+            "id": "https://keycache.github.io/blog/when-you-are-the-judge-and-contestant-for-your-and-thei-ideas",
+            "content_html": "You’re in a team meeting, two ideas clash, and yours is one of them. How do you stay fair, thoughtful, and not spiral into self-doubt? Here's a relatable deep dive into the mental gymnastics of honest decision-making.",
+            "url": "https://keycache.github.io/blog/when-you-are-the-judge-and-contestant-for-your-and-thei-ideas",
+            "title": "When You’re the Judge and the Contestant for your and their ideas.",
+            "date_modified": "2025-07-31T00:00:00.000Z",
+            "tags": [
+                "leadership",
+                "decision-making",
+                "bias",
+                "team-culture",
+                "self-doubt",
+                "growth"
+            ]
         }
     ]
 }

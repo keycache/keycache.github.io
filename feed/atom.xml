@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://keycache.github.io/</id>
     <title>Akash Patki</title>
-    <updated>2025-07-04T21:02:38.391Z</updated>
+    <updated>2025-07-31T04:15:33.270Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://keycache.github.io/"/>
     <link rel="self" href="https://keycache.github.io/atom.xml"/>
@@ -17,5 +17,29 @@
         <category label="dev-life" term="dev-life"/>
         <category label="personas" term="personas"/>
         <category label="programming" term="programming"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[No More `if isinstance`— Master Polymorphism in Python with `@singledispatch`!]]></title>
+        <id>https://keycache.github.io/blog/polymorpism-in-python</id>
+        <link href="https://keycache.github.io/blog/polymorpism-in-python"/>
+        <updated>2025-07-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Polymorphism sounds complex, but it’s easier (and cooler) than you think. Let a cartoon snake walk you through writing cleaner Python code.]]></summary>
+        <category label="python" term="python"/>
+        <category label="programming" term="programming"/>
+        <category label="oop" term="oop"/>
+        <category label="polymorphism" term="polymorphism"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[When You’re the Judge and the Contestant for your and their ideas.]]></title>
+        <id>https://keycache.github.io/blog/when-you-are-the-judge-and-contestant-for-your-and-thei-ideas</id>
+        <link href="https://keycache.github.io/blog/when-you-are-the-judge-and-contestant-for-your-and-thei-ideas"/>
+        <updated>2025-07-31T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[You’re in a team meeting, two ideas clash, and yours is one of them. How do you stay fair, thoughtful, and not spiral into self-doubt? Here's a relatable deep dive into the mental gymnastics of honest decision-making.]]></summary>
+        <category label="leadership" term="leadership"/>
+        <category label="decision-making" term="decision-making"/>
+        <category label="bias" term="bias"/>
+        <category label="team-culture" term="team-culture"/>
+        <category label="self-doubt" term="self-doubt"/>
+        <category label="growth" term="growth"/>
     </entry>
 </feed>
