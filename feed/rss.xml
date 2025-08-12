@@ -4,13 +4,13 @@
         <title>Akash Patki</title>
         <link>https://keycache.github.io/</link>
         <description>A showcase for a Toronto-based full-stack developer with 15+ years of experience across startups, scale-ups, and big banks.</description>
-        <lastBuildDate>Tue, 12 Aug 2025 22:16:37 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 12 Aug 2025 22:20:46 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <copyright>All rights reserved 2025, Akash Patki</copyright>
         <atom:link href="https://keycache.github.io/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[Core Idea Behing Encoding, Hashing, and Encryption Explained]]></title>
+            <title><![CDATA[Core Idea Behing Encoding, Hashing, and Encryption]]></title>
             <link>https://keycache.github.io/blog/2025-08-01-encoding-hashing-encryption</link>
             <guid isPermaLink="false">https://keycache.github.io/blog/2025-08-01-encoding-hashing-encryption</guid>
             <pubDate>Thu, 07 Aug 2025 00:00:00 GMT</pubDate>

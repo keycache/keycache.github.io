@@ -9,7 +9,7 @@
             "id": "https://keycache.github.io/blog/2025-08-01-encoding-hashing-encryption",
             "content_html": "How does your digital information stay safe and compatible with online sysstems? Understanding the core differences between encoding, hashing, and encryption is crucial for every software engineer.",
             "url": "https://keycache.github.io/blog/2025-08-01-encoding-hashing-encryption",
-            "title": "Core Idea Behing Encoding, Hashing, and Encryption Explained",
+            "title": "Core Idea Behing Encoding, Hashing, and Encryption",
             "date_modified": "2025-08-07T00:00:00.000Z",
             "tags": [
                 "encoding",
