@@ -2,12 +2,23 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://keycache.github.io/</id>
     <title>Akash Patki</title>
-    <updated>2025-07-31T04:15:33.270Z</updated>
+    <updated>2025-08-12T22:16:37.171Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://keycache.github.io/"/>
     <link rel="self" href="https://keycache.github.io/atom.xml"/>
     <subtitle>A showcase for a Toronto-based full-stack developer with 15+ years of experience across startups, scale-ups, and big banks.</subtitle>
     <rights>All rights reserved 2025, Akash Patki</rights>
+    <entry>
+        <title type="html"><![CDATA[Core Idea Behing Encoding, Hashing, and Encryption Explained]]></title>
+        <id>https://keycache.github.io/blog/2025-08-01-encoding-hashing-encryption</id>
+        <link href="https://keycache.github.io/blog/2025-08-01-encoding-hashing-encryption"/>
+        <updated>2025-08-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How does your digital information stay safe and compatible with online sysstems? Understanding the core differences between encoding, hashing, and encryption is crucial for every software engineer.]]></summary>
+        <category label="encoding" term="encoding"/>
+        <category label="hashing" term="hashing"/>
+        <category label="encryption" term="encryption"/>
+        <category label="fundamentals" term="fundamentals"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[The Four Faces of a Developer: Why Every Dev Has (At Least) 4 Personalities]]></title>
         <id>https://keycache.github.io/blog/four-faces-of-a-developer</id>
@@ -19,7 +30,7 @@
         <category label="programming" term="programming"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[No More `if isinstance`— Master Polymorphism in Python with `@singledispatch`!]]></title>
+        <title type="html"><![CDATA[No More `if isinstance`— Polymorphism in Python with `@singledispatch`!]]></title>
         <id>https://keycache.github.io/blog/polymorpism-in-python</id>
         <link href="https://keycache.github.io/blog/polymorpism-in-python"/>
         <updated>2025-07-15T00:00:00.000Z</updated>

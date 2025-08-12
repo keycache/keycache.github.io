@@ -4,11 +4,22 @@
         <title>Akash Patki</title>
         <link>https://keycache.github.io/</link>
         <description>A showcase for a Toronto-based full-stack developer with 15+ years of experience across startups, scale-ups, and big banks.</description>
-        <lastBuildDate>Thu, 31 Jul 2025 04:15:33 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 12 Aug 2025 22:16:37 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <copyright>All rights reserved 2025, Akash Patki</copyright>
         <atom:link href="https://keycache.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Core Idea Behing Encoding, Hashing, and Encryption Explained]]></title>
+            <link>https://keycache.github.io/blog/2025-08-01-encoding-hashing-encryption</link>
+            <guid isPermaLink="false">https://keycache.github.io/blog/2025-08-01-encoding-hashing-encryption</guid>
+            <pubDate>Thu, 07 Aug 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[How does your digital information stay safe and compatible with online sysstems? Understanding the core differences between encoding, hashing, and encryption is crucial for every software engineer.]]></description>
+            <category>encoding</category>
+            <category>hashing</category>
+            <category>encryption</category>
+            <category>fundamentals</category>
+        </item>
         <item>
             <title><![CDATA[The Four Faces of a Developer: Why Every Dev Has (At Least) 4 Personalities]]></title>
             <link>https://keycache.github.io/blog/four-faces-of-a-developer</link>
@@ -20,7 +31,7 @@
             <category>programming</category>
         </item>
         <item>
-            <title><![CDATA[No More `if isinstance`— Master Polymorphism in Python with `@singledispatch`!]]></title>
+            <title><![CDATA[No More `if isinstance`— Polymorphism in Python with `@singledispatch`!]]></title>
             <link>https://keycache.github.io/blog/polymorpism-in-python</link>
             <guid isPermaLink="false">https://keycache.github.io/blog/polymorpism-in-python</guid>
             <pubDate>Tue, 15 Jul 2025 00:00:00 GMT</pubDate>

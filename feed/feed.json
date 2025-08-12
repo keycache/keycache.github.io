@@ -6,6 +6,19 @@
     "description": "A showcase for a Toronto-based full-stack developer with 15+ years of experience across startups, scale-ups, and big banks.",
     "items": [
         {
+            "id": "https://keycache.github.io/blog/2025-08-01-encoding-hashing-encryption",
+            "content_html": "How does your digital information stay safe and compatible with online sysstems? Understanding the core differences between encoding, hashing, and encryption is crucial for every software engineer.",
+            "url": "https://keycache.github.io/blog/2025-08-01-encoding-hashing-encryption",
+            "title": "Core Idea Behing Encoding, Hashing, and Encryption Explained",
+            "date_modified": "2025-08-07T00:00:00.000Z",
+            "tags": [
+                "encoding",
+                "hashing",
+                "encryption",
+                "fundamentals"
+            ]
+        },
+        {
             "id": "https://keycache.github.io/blog/four-faces-of-a-developer",
             "content_html": "Every developer juggles at least four identities — polished pro, clueless explainer, chill buddy, and masked internet gremlin — depending on who's watching",
             "url": "https://keycache.github.io/blog/four-faces-of-a-developer",
@@ -21,7 +34,7 @@
             "id": "https://keycache.github.io/blog/polymorpism-in-python",
             "content_html": "Polymorphism sounds complex, but it’s easier (and cooler) than you think. Let a cartoon snake walk you through writing cleaner Python code.",
             "url": "https://keycache.github.io/blog/polymorpism-in-python",
-            "title": "No More `if isinstance`— Master Polymorphism in Python with `@singledispatch`!",
+            "title": "No More `if isinstance`— Polymorphism in Python with `@singledispatch`!",
             "date_modified": "2025-07-15T00:00:00.000Z",
             "tags": [
                 "python",
