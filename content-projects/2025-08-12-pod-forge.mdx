@@ -1,0 +1,80 @@
+---
+title: Pod Forge: Turn messy notes into a snackable podcast fast
+publishedAt: "2025-08-12"
+summary: "Convert raw notes, chat logs, or markdown into casual, multi-voice podcast conversations."
+tags: "encoding, hashing, encryption, fundamentals"
+draft: "false"
+---
+
+
+## Introduction
+- Takes raw notes, chats, or markdown and makes a casual multi-voice conversation.
+- Outputs clean JSON that’s ready for TTS or voice cloning.
+- Lets you pick how many speakers and spreads lines naturally.
+- Uses Kitten TTS to synthesize lightweight audio.
+
+<Image
+  src="/photos/pod-forge-1-robots-with-mics.png"
+  alt="robots with mics"
+  width={640}
+  height={500}
+/>
+
+## How it works
+- Feed text via file or stdin. The agent builds a focused dialogue.
+- CLI lets you set participant count and paths for input and output.
+- Produces structured JSON so audio can be generated reliably.
+- Kitten TTS renders a single WAV from the JSON conversation.
+
+<Image
+  src="/photos/pod-forge-2-notes-to-bubbles.png"
+  alt="notes to bubbles"
+  width={640}
+  height={500}
+/>
+
+## Quick start
+- Run: python agent.py --participant-count 2
+- Optional text: --text-path data/test_data.txt
+- Optional audio: --target-audio-path .data/audio/out.wav
+- Swap counts or paths to fit your workflow.
+
+<Image
+  src="/photos/pod-forge-3-press-run.png"
+  alt="press run"
+  width={640}
+  height={500}
+/>
+
+## What you can build now
+- Turn long AI chats into a short panel talk.
+- Convert meeting notes into a two-host recap.
+- Make a study guide episode from markdown.
+- Prototype multi-voice narration for a demo.
+
+<Image
+  src="/photos/pod-forge-4-roundtable-bots.png"
+  alt="roundtable bots"
+  width={640}
+  height={500}
+/>
+
+
+## Roadmap and questions
+- Do we want speaker profiles with stable voice IDs in the JSON.
+- Should we chunk very long inputs and stitch segments for smooth flow.
+- Do we need a seed flag for reproducible dialogue order and timing.
+- Should we stream audio per turn instead of one final WAV.
+- Are we enforcing simple punctuation cleanup before TTS for clarity.
+
+<Image
+  src="/photos/pod-forge-5-roadmap.png"
+  alt="roadmap bot"
+  width={640}
+  height={500}
+/>
+
+
+---
+
+*Want to try Pod-Forge or contribute to its development? Check out the [project repository](https://github.com/keycache/pod-forge) and let's build something amazing together!*
